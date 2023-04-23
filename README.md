@@ -1,3 +1,8 @@
-# MCAL-ATmaega32
-- ## GPIO-Driver
+# Drivers-ATmaega32
+- ## ECUAL
+    #### - Seven Segment Driver
+    
+- ## MCAL
+    #### - GPIO Driver
+    
 

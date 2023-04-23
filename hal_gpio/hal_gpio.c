@@ -211,9 +211,9 @@ Std_ReturnType gpio_port_direction_intialize(const port_index_t port , const dir
 	return ret;
 }
 /*
-*	@brief		Getting the port direction
+*	@brief		Getting the port direction, note that (*direction_status) may be any value 
 *	@param		port				pointer to enum type 	  @ref port_index_t
-*				direction_status	pointer to enum type	  @ref direction_t
+*			direction_status	pointer to enum type			 @ref direction_t
 *	@return		Status of the function
 *				(E_OK)		The function works successfully
 *				(E_NOT_OK)	The function has some issues

@@ -20,7 +20,10 @@ typedef uint8 Std_ReturnType;
 
 
 /*	Section: Macro Definitions*/
+#ifndef NULL
 #define NULL			0x00U
+#endif
+
 
 #define CONFIG_ENABLE	0x01U
 #define CONFIG_DISABLE	0x00U

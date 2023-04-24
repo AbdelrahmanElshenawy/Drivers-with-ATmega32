@@ -19,8 +19,8 @@
 /*	Section: Data Types Declarations*/
 	
 typedef struct{
-	pin_config_t seven_seg_pins_config[4];
-	seven_seg_type_t seven_seg_type;
+	pin_config_t seven_seg_pins_config[4];		/*@ref file hal_gpio.h*/
+	seven_seg_type_t seven_seg_type;			/*@ref file ecu_seven_seg_cfg.h*/
 	}seven_seg_config_t; 
 	
 	
@@ -40,7 +40,7 @@ typedef struct{
 *				(E_OK)		The function works successfully
 *				(E_NOT_OK)	The function has some issues
 */
-Std_ReturnType ecu_seven_seg_initialize(seven_seg_config_t *seven_seg_config);
+Std_ReturnType ecu_seven_seg_initialize(const seven_seg_config_t *seven_seg_config);
 /*
 *	@brief		Writing a specific number to the seven segment
 *	@param		seven_seg_config	pointer to seven segment configurations	   @ref	seven_seg_config_t
@@ -50,7 +50,7 @@ Std_ReturnType ecu_seven_seg_initialize(seven_seg_config_t *seven_seg_config);
 *				(E_NOT_OK)	The function has some issues
 */
 
-Std_ReturnType ecu_seven_seg_write_number(seven_seg_config_t *seven_seg_config , uint8 number);
+Std_ReturnType ecu_seven_seg_write_number(const seven_seg_config_t *seven_seg_config ,const uint8 number);
 
 
 

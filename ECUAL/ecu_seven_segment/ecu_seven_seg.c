@@ -14,6 +14,9 @@
 *				(E_OK)		The function works successfully
 *				(E_NOT_OK)	The function has some issues
 */
+/*section : Includes*/
+#include "ecu_seven_seg.h"
+
 Std_ReturnType ecu_seven_seg_initialize(const seven_seg_config_t *seven_seg_config){
 	Std_ReturnType ret = E_OK;
 	if((NULL == seven_seg_config) || (seven_seg_config->seven_seg_type  > MAX_CONFIG_SEG_TYPE)){
@@ -26,6 +29,7 @@ Std_ReturnType ecu_seven_seg_initialize(const seven_seg_config_t *seven_seg_conf
 			ret = gpio_pin_direction_intialize(&(seven_seg_config->seven_seg_pins_config[pin_num]));
 		}
 	}
+	return ret;
 }
 /*
 *	@brief		Writing a specific number to the seven segment
